@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maria Silva - Portfólio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      height: 100vh;
+      background: #0f0f0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      position: relative;
+      color: white;
+    }
+
+    h1 {
+      font-size: 3rem;
+      animation: pulse 2s infinite;
+      z-index: 2;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.9; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .wave {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, #6f42c1, transparent 70%);
+      opacity: 0.4;
+      animation: float 6s ease-in-out infinite;
+      z-index: 1;
+      border-radius: 50%;
+    }
+
+    .wave.top-left {
+      top: -100px;
+      left: -100px;
+    }
+
+    .wave.bottom-right {
+      bottom: -100px;
+      right: -100px;
+      animation-delay: 3s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(20px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wave top-left"></div>
+  <div class="wave bottom-right"></div>
+  <h1>Maria Silva</h1>
+</body>
+</html>
